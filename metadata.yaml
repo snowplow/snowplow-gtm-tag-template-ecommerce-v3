@@ -1,0 +1,9 @@
+homepage: "https://snowplow.io"
+documentation: "https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/javascript-trackers/web-tracker/google-tag-manager-custom-template/v3-tags/ecommerce-tag-template/"
+versions:
+  # Latest version
+  - sha: dd1521c6abff2ec85de0bf0246b8f609d8f332bf
+    changeNotes: |2
+      Add initial template (#2)
+      Add GitHub actions (#1)
+  # Older versions
