@@ -1,0 +1,9 @@
+homepage: "https://snowplow.io"
+documentation: "https://docs.snowplow.io"
+versions:
+  # Latest version
+  - sha: a0961779f049aee5164334c3b9edc4455f0ce8bd
+    changeNotes: |2
+      Add initial template (#2)
+      Add GitHub actions (#1)
+  # Older versions
