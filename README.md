@@ -4,6 +4,7 @@
 [![License][license-image]][license]
 [![Release][release-image]][releases]
 
+
 [Snowplow][snowplow] is a scalable open-source platform for rich, high quality, low-latency data collection. It is designed to collect high quality, complete behavioral data for enterprise business.
 
 ## Overview
