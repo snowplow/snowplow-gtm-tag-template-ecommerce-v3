@@ -9,8 +9,8 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Snowplow v3 Ecommerce",
-  "description": "Instrument your Snowplow Ecommerce tracking with Snowplow JavaScript tracker library (v3).",
+  "displayName": "Snowplow Ecommerce",
+  "description": "Instrument your Snowplow Ecommerce tracking with Snowplow JavaScript tracker library.",
   "__wm": "VGVtcGxhdGUtQXV0aG9yX1Nub3dwbG93QW5hbHl0aWNzVjNUYWctU2ltby1BaGF2YQ\u003d\u003d",
   "securityGroups": [],
   "categories": [
@@ -696,7 +696,7 @@ const templateStorage = require('templateStorage');
 const SNOWPLOW_WINDOW_NAMESPACE = 'GlobalSnowplowNamespace';
 const SNOWPLOW_TRACKER_LIST = 'snowplow_tracker_list';
 const SNOWPLOW_GLOBAL_NAME = 'snowplow';
-const ERROR_LOG_PREFIX = '[ERROR GTM / Snowplow v3 Ecommerce] ';
+const ERROR_LOG_PREFIX = '[ERROR GTM / Snowplow Ecommerce] ';
 const PLUGIN_PKG = '@snowplow/browser-plugin-snowplow-ecommerce@';
 const PLUGIN_DIST = '/dist/index.umd.min.js';
 const JSDELIVR = 'https://cdn.jsdelivr.net/npm/';
@@ -2398,3 +2398,5 @@ setup: |-
 ___NOTES___
 
 Created on 16/10/2023, 09:46:49
+
+
