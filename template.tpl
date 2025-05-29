@@ -12,7 +12,6 @@ ___INFO___
   "displayName": "Snowplow v3 Ecommerce",
   "description": "Instrument your Snowplow Ecommerce tracking with Snowplow JavaScript tracker library (v3).",
   "__wm": "VGVtcGxhdGUtQXV0aG9yX1Nub3dwbG93QW5hbHl0aWNzVjNUYWctU2ltby1BaGF2YQ\u003d\u003d",
-  "securityGroups": [],
   "categories": [
     "ANALYTICS"
   ],
@@ -26,7 +25,8 @@ ___INFO___
   },
   "containerContexts": [
     "WEB"
-  ]
+  ],
+  "securityGroups": []
 }
 
 
@@ -1010,13 +1010,18 @@ const handleGA4Ecommerce = (spName, commander, tagConfig) => {
 
   switch (method) {
     case 'trackGA4ViewPromotion':
-      spName(commander(method), ecom);
-      break;
     case 'trackGA4SelectPromotion':
       spName(commander(method), ecom);
       break;
     case 'trackGA4BeginCheckout':
       spName(commander(method), opts);
+      break;
+    case 'trackGA4AddToCart':
+    case 'trackGA4RemoveFromCart':
+    case 'trackGA4AddShippingInfo':
+    case 'trackGA4AddPaymentOptions':
+    case 'trackGA4Transaction':
+      spName(commander(method), ecom, opts);
       break;
     default:
       spName(commander(method), mergeTo(ecom, opts, 'target'));
@@ -2115,12 +2120,12 @@ scenarios:
     assertThat(trackCalledTimes).isEqualTo(1);
     assertThat(trackArgs.length).isEqualTo(1);
     const ecomCopy = json.parse(json.stringify(ga4AddToCart));
-    ecomCopy.finalCartValue = 100;
     const expectedArgs = [
       'trackGA4AddToCart:'.concat(
         mockData.trackerConfigurationVariable.trackerOptions.trackerName
       ),
       ecomCopy,
+      options,
     ];
     assertThat(trackArgs[0]).isEqualTo(expectedArgs);
     assertApi('gtmOnSuccess').wasCalled();
@@ -2398,3 +2403,5 @@ setup: |-
 ___NOTES___
 
 Created on 16/10/2023, 09:46:49
+
+
