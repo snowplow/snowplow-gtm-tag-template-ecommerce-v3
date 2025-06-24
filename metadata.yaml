@@ -2,6 +2,10 @@ homepage: "https://snowplow.io"
 documentation: "https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/javascript-trackers/web-tracker/google-tag-manager-custom-template/v3-tags/ecommerce-tag-template/"
 versions:
   # Latest version
+  - sha: 4768b7dde7d3c7f372d563d3cf3521fd026e9dd6
+    changeNotes: |2
+      Update template for GTM v4 (#5)
+      Fix parameters for GA4 adapter methods
   - sha: dd1521c6abff2ec85de0bf0246b8f609d8f332bf
     changeNotes: |2
       Add initial template (#2)
